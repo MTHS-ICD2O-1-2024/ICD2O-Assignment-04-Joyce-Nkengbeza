@@ -52,7 +52,7 @@ function calculate() {
       "<br>Total: $" + total.toFixed(2) + "</p>"
   } else {
     document.getElementById("results").innerHTML =
-      "<p>Please select both the number and flavour of cookies before calculating the total.</p>"
+      "<p>Please select both the number and flavour of cookies before you can get the total.</p>"
   }
 }
 
