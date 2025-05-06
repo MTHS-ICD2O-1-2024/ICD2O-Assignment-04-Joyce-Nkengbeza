@@ -39,7 +39,7 @@ function calculate() {
     flavourPrice = 0.50
   }
   //process
-  const subtotal = cookiePrice + flavourPrice
+  const subtotal = cookiePrice + flavourPrice 
   const tax = Math.round(subtotal * TAX_RATE * 100) / 100
   const total = Math.round((subtotal + tax) * 100) / 100
 
@@ -48,7 +48,7 @@ function calculate() {
     document.getElementById("results").innerHTML =
       "<p>Subtotal: $" + subtotal.toFixed(2) +
       "<br>Tax: $" + tax.toFixed(2) +
-      "<br>Total: $" + total.toFixed(2) + "</p>"
+      "<br>Yout total is  $" + total.toFixed(2) + "</p>"
   } else {
     document.getElementById("results").innerHTML =
       "<p>Please select both the number and flavour of cookies before you can get the total.</p>"

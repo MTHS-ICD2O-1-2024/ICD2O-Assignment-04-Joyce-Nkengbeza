@@ -19,6 +19,8 @@
 </head>
 
 <body>
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script src="./js/script.js"></script>
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
@@ -26,6 +28,9 @@
       </div>
     </header>
     <main class="mdl-layout__content">
+      <div class="right-image">
+        <img src="./images/cookies.png" alt="image of cookies logo" />
+      </div>
       <div class="page-content">How many cookies in what flavour would you like to order?</div>
       <br />
       <form>
@@ -33,19 +38,19 @@
         <!-- Numeric Radio Button Group -->
         <p>Pick your desired number of cookies!</p>
 
-        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="amount">
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="cookienumber1">
           <input type="radio" id="cookienumber1" class="mdl-radio__button" name="amount" value="5" />
           <span class="mdl-radio__label">5 ($10)</span>
         </label>
         <br />
 
-        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="amount">
-          <input type="radio" id="cookienumber2 class="mdl-radio__button" name="amount" value="10" />
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="cookienumber2">
+          <input type="radio" id="cookienumber2" class="mdl-radio__button" name="amount" value="10" />
           <span class="mdl-radio__label">10 ($20)</span>
         </label>
         <br />
 
-        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="amount">
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="cookienumber3">
           <input type="radio" id="cookienumber3" class="mdl-radio__button" name="amount" value="20" />
           <span class="mdl-radio__label">20 ($30)</span>
         </label>
@@ -54,19 +59,19 @@
         <!-- Flavour Radio Button Group -->
         <p>Pick your desiered flavour!</p>
 
-        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="flavour-1">
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="flavour1">
           <input type="radio" id="flavour1" class="mdl-radio__button" name="type" value="Chocolate Chip" />
           <span class="mdl-radio__label">Chocolate Chips + ($0.50)</span>
         </label>
         <br />
 
-        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="flavour-2">
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="flavour2">
           <input type="radio" id="flavour2" class="mdl-radio__button" name="type" value="Oatmeal Raisin" />
           <span class="mdl-radio__label">Oatmeal Raisin + ($0.95)</span>
         </label>
         <br />
 
-        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="flavour-3">
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="flavour3">
           <input type="radio" id="flavour3" class="mdl-radio__button" name="type" value="Sugar" />
           <span class="mdl-radio__label">Sugar + ($0.50)</span>
         </label>
