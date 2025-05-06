@@ -28,13 +28,13 @@ function calculate() {
   let flavourChoice = ""
   let flavourPrice = 0
 
-  if (document.getElementById("flavour-1").checked) {
+  if (document.getElementById("flavour1").checked) {
     flavourChoice = "Chocolate Chip"
     flavourPrice = 0.50
-  } else if (document.getElementById("flavour-2").checked) {
+  } else if (document.getElementById("flavour2").checked) {
     flavourChoice = "Oatmeal Raisin"
     flavourPrice = 0.95
-  } else if (document.getElementById("flavour-3").checked) {
+  } else if (document.getElementById("flavour3").checked) {
     flavourChoice = "Sugar"
     flavourPrice = 0.50
   }
