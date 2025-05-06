@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!-- ICS2O-Unit5-04-HTML-MDL -->
+<!-- ICS2O-Assignment-04-HTML-MDL -->
 <html lang="en-ca">
 
 <head>
   <meta charset="utf-8" />
-  <meta name="description" content=">Museum Prices for a day depending on age" />
+  <meta name="description" content=">Joyce's Cookie shop. Order cookies here.'" />
   <meta name="keywords" content="mths, icd2o" />
   <meta name="author" content="Joyce Nkengbeza" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,75 +15,67 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32new.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16new.png" />
   <link rel="manifest" href="./site.webmanifest" />
-  <title>Museum Prices for a day depending on age, JS</title>
+  <title>Joyce's Cookie Shop</title>
 </head>
 
-  <body>
-  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-  <script src="./js/script.js"></script>
+<body>
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">Museum Prices for a day depending on age, JS</span>
+        <span class="mdl-layout-title">Welcome to Joyce's Cookie Shop!</span>
       </div>
     </header>
     <main class="mdl-layout__content">
-      <div class="right-image">
-        <img src="./images/museum-clipart-md.png" alt="image of museum" />
-      </div>
-      <div class="page-content">Enter your age and the day of the week</div>
+      <div class="page-content">How many cookies in what flavour would you like to order?</div>
       <br />
       <form>
         <br />
-        <!-- Numeric Textfield -->
-        <div class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="age" />
-          <label class="mdl-textfield__label" for="age">enter age...</label>
-          <!-- class "mdl-textfield__error" -->
-          <span class="mdl-textfield__error">Input is not a number!</span>
-        </div>
+        <!-- Numeric Radio Button Group -->
+        <p>Pick your desired number of cookies!</p>
+
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="amount">
+          <input type="radio" id="cookienumber1" class="mdl-radio__button" name="amount" value="5" />
+          <span class="mdl-radio__label">5 ($10)</span>
+        </label>
         <br />
-        
-        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="sunday">
-          <input type="radio" id="sunday" class="mdl-radio__button" name="day" value="sunday" checked />
-          <span class="mdl-radio__label">sunday</span>
+
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="amount">
+          <input type="radio" id="cookienumber2 class="mdl-radio__button" name="amount" value="10" />
+          <span class="mdl-radio__label">10 ($20)</span>
         </label>
-        </br>
-        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="monday">
-          <input type="radio" id="monday" class="mdl-radio__button" name="day" value="monday" />
-          <span class="mdl-radio__label">monday</span>
+        <br />
+
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="amount">
+          <input type="radio" id="cookienumber3" class="mdl-radio__button" name="amount" value="20" />
+          <span class="mdl-radio__label">20 ($30)</span>
         </label>
-        </br>
-        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tuesday">
-          <input type="radio" id="tuesday" class="mdl-radio__button" name="day" value="tuesday" />
-          <span class="mdl-radio__label">tuesday</span>
+        <br />
+        <br />
+        <!-- Flavour Radio Button Group -->
+        <p>Pick your desiered flavour!</p>
+
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="flavour-1">
+          <input type="radio" id="flavour-1" class="mdl-radio__button" name="type" value="Chocolate Chip" />
+          <span class="mdl-radio__label">Chocolate Chips + ($0.50)</span>
         </label>
-        </br>
-      <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="wednesday">
-        <input type="radio" id="wednesday" class="mdl-radio__button" name="day" value="wednesday" />
-        <span class="mdl-radio__label">wednesday</span>
-      </label>
-        </br>
-        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="thursday">
-          <input type="radio" id="thursday" class="mdl-radio__button" name="day" value="thursday" />
-          <span class="mdl-radio__label">thursday</span>
+        <br />
+
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="flavour-2">
+          <input type="radio" id="flavour-2" class="mdl-radio__button" name="type" value="Oatmeal Raisin" />
+          <span class="mdl-radio__label">Oatmeal Raisin + ($0.95)</span>
         </label>
-        </br>
-        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="friday">
-          <input type="radio" id="friday" class="mdl-radio__button" name="day" value="friday" />
-          <span class="mdl-radio__label">friday</span>
+        <br />
+
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="flavour-3">
+          <input type="radio" id="flavour-3" class="mdl-radio__button" name="type" value="Sugar" />
+          <span class="mdl-radio__label">Sugar + ($0.50)</span>
         </label>
-        </br>
-        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="saturday">
-          <input type="radio" id="saturday" class="mdl-radio__button" name="day" value="saturday" />
-          <span class="mdl-radio__label">saturday</span>
-        </label>
-      </br>
-        
+        <br />
+
         <!-- Accent-colored raised button with ripple -->
         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
           onclick="calculate()" type="button">
-          prices
+          Show final price
         </button>
       </form>
       <br />
@@ -93,5 +85,4 @@
     </main>
   </div>
 </body>
-
 </html>

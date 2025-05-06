@@ -1,25 +1,58 @@
 // Copyright (c) 2020 Mr. Coxall All rights reserved
 //
 // Created by: Joyce Nkengbeza
-// Created on: April 2025
+// Created on: May 2025
 // This file contains the JS functions for index.html
 
-'use strict'
+"use strict"
 
 function calculate() {
-  // input
-  const age = (document.getElementById("age").value);
-  const day = document.querySelector('input[name="day"]:checked').value;
+  const TAX_RATE = 0.13
 
-  // process
-    if ( day == "tuesday" || day == "thursday" || (age >= 12 && age <=21)) {
-    // output
-    document.getElementById("results").innerHTML =
-      "<p>You can recieve a student discount.</p>";
+  // cookie quantity selection
+  let cookieChoice = ""
+  let cookiePrice = 0
+
+  if (document.getElementById("cookienumber1").checked) {
+    cookieChoice = "5"
+    cookiePrice = 10.0
+  } else if (document.getElementById("cookienumber2").checked) {
+    cookieChoice = "10"
+    cookiePrice = 20.0
+  } else if (document.getElementById("cookienumber3").checked) {
+    cookieChoice = "20"
+    cookiePrice = 30.0
   }
 
-  else {
+  // flavour selection
+  let flavourChoice = ""
+  let flavourPrice = 0
+
+  if (document.getElementById("flavour-1").checked) {
+    flavourChoice = "Chocolate Chip"
+    flavourPrice = 0.50
+  } else if (document.getElementById("flavour-2").checked) {
+    flavourChoice = "Oatmeal Raisin"
+    flavourPrice = 0.95
+  } else if (document.getElementById("flavour-3").checked) {
+    flavourChoice = "Sugar"
+    flavourPrice = 0.50
+  }
+  //process
+  // totals
+  const subtotal = cookiePrice + flavourPrice
+  const tax = Math.round(subtotal * TAX_RATE * 100) / 100
+  const total = Math.round((subtotal + tax) * 100) / 100
+
+  // output
+  if (cookieChoice !== "" && flavourChoice !== "") {
     document.getElementById("results").innerHTML =
-      "<p>You have to pay regular price.</p>";
+      "<p>Subtotal: $" + subtotal.toFixed(2) +
+      "<br>Tax: $" + tax.toFixed(2) +
+      "<br>Total: $" + total.toFixed(2) + "</p>"
+  } else {
+    document.getElementById("results").innerHTML =
+      "<p>Please select both the number and flavour of cookies before calculating the total.</p>"
   }
 }
+
