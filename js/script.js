@@ -9,7 +9,7 @@
 function calculate() {
   const TAX_RATE = 0.13
 
-  // cookie quantity selection
+  // amount of cookies selection
   let cookieChoice = ""
   let cookiePrice = 0
 
