@@ -39,7 +39,6 @@ function calculate() {
     flavourPrice = 0.50
   }
   //process
-  // totals
   const subtotal = cookiePrice + flavourPrice
   const tax = Math.round(subtotal * TAX_RATE * 100) / 100
   const total = Math.round((subtotal + tax) * 100) / 100
